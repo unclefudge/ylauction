@@ -120,45 +120,52 @@
                         </div>
                         <div class="modal-body text-center">
                             <input v-model="xx.bid" name="mybid" type="hidden" value="">
-                            <input v-model="xx.bidder" name="mybidder" type="test" value="">
-                            <div v-if="xx.bid >= xx.item.bid_min">
-                                <h4>Please confirm your bid for</h4>
+                            <input v-model="xx.bidder" name="mybidder" type="hidden" value="">
+                            <div v-if="xx.admin == 1 && !xx.bidder">
+                                {{-- Admin - but no bidder given --}}
+                                <h4 class="text-danger">Must select a bidder to place bid</h4>
                                 <h4 class="text-primary">{{ $item->name }}</h4>
-                                @if (Auth::user()->admin)
-                                    <h4><span class="badge badge-info">on behalf of @{{ xx.bidder_name }}</span></h4>
-                                @endif
-
                                 <br>
-                                <div class="row d-flex justify-content-center">
-                                    <div class="col-6 border p-3"><h3>$@{{ xx.bid }}</h3></div>
-                                </div>
                             </div>
                             <div v-else>
-                                <h4 class="text-danger">Insufficient bid for</h4>
-                                <h4 class="text-primary">{{ $item->name }}</h4>
-                                <br>
-                                <div class="row d-flex justify-content-center">
-                                    <div class="col-9 border p-3"><h3>Minimum bid $@{{ xx.item.bid_min }}</h3></div>
+                                {{-- Confirm bid --}}
+                                <div v-if="xx.bid >= xx.item.bid_min">
+                                    <h4>Please confirm your bid for</h4>
+                                    <h4 class="text-primary">{{ $item->name }}</h4>
+                                    @if (Auth::user()->admin)
+                                        <h4><span class="badge badge-info">on behalf of @{{ xx.bidder_name }}</span></h4>
+                                    @endif
+
+                                    <br>
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="col-6 border p-3"><h3>$@{{ xx.bid }}</h3></div>
+                                    </div>
+                                </div>
+                                {{-- Insufficient bid --}}
+                                <div v-else>
+                                    <h4 class="text-danger">Insufficient bid for</h4>
+                                    <h4 class="text-primary">{{ $item->name }}</h4>
+                                    <br>
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="col-9 border p-3"><h3>Minimum bid $@{{ xx.item.bid_min }}</h3></div>
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
                         <div class="modal-footer bg-light">
-                            <div v-if="xx.bid >= xx.item.bid_min">
-                                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-primary">Confirm bid</button>
+                            <div v-if="xx.admin == 1 && !xx.bidder || xx.bid < xx.item.bid_min">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">I Understand</button>
                             </div>
                             <div v-else>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">I Understand</button>
+                                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Confirm bid</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
-
-        <!--<pre>@{{ $data }}</pre>
-        -->
+        <pre>@{{ $data }}</pre>
     </div>
 @endsection
 
@@ -171,7 +178,7 @@
     <script type="text/javascript">
         var xx = {
             //bid: "{{ $item->nextBid($item->price) }}", item: '',
-            bid: '', bidder: '', bidder_name: '', item: '',
+            bid: '', bidder: '', bidder_name: '', admin: "{{ (Auth::user()->admin) ? 1 : 0 }}", item: '',
         };
 
         $(document).ready(function () {

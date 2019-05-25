@@ -1,35 +1,28 @@
 @extends('layouts/main')
 
 @section('content')
-    <div class="container-fluid" id="vue-app">
+    <div class="container" id="vue-app">
         <br>
-        <h1 class="mb-3 text-center">Auction Live</h1>
+        <h3 class="mb-3">Auction Items</h3>
 
         <table class="table table-hover">
             <thead>
             <tr>
-                <th scope="col" width="10%">Price</th>
                 <th scope="col">Item</th>
-                <th scope="col" width="10%">Bidder</th>
-                <th scope="col">Status</th>
+                <th scope="col" width="10%">Bids</th>
+                <th scope="col" width="10%">Winner</th>
+                <th scope="col" width="10%">Price</th>
+                <th scope="col">Max</th>
             </tr>
             </thead>
             <tbody>
             <div v-if="xx.items">
                 <tr v-for="item in xx.items">
-                    <td><h4>$@{{ item.price }}</h4></td>
-                    <td><h4>@{{ item.name }} <small v-if="item.reserve && item.price < item.reserve" class="text-danger"> &nbsp; RESERVE NOT MET</small></h4></td>
-                    <td><h4>#@{{ item.highest_bid_id }}</h4></td>
-                    <td>
-                        <h4>
-                            <span v-if="item.bids > 1 && item.bids < 4" class="badge badge-pill" style="background: #FFFFD2; color:#000">LITTLE COMPETITION</span>
-                            <span v-if="item.bids > 3 && item.bids < 6" class="badge badge-pill" style="background: #FFF0AA; color:#000">SOME ACTION</span>
-                            <span v-if="item.bids > 5 && item.bids < 8" class="badge badge-pill" style="background: #FEDE81; color:#000">WARMING UP</span>
-                            <span v-if="item.bids > 7 && item.bids < 10" class="badge badge-pill" style="background: #FEBB56; color:#fff">GETTING HOT</span>
-                            <span v-if="item.bids > 9 && item.bids < 11" class="badge badge-pill" style="background: #FC592F; color:#fff">SMOKING HOT</span>
-                            <span v-if="item.bids > 11" class="badge badge-pill" style="background: #FF0000; color:#fff">ITS A BID WAR</span>
-                        </h4>
-                    </td>
+                    <td>@{{ item.name }} <small v-if="item.reserve && item.price < item.reserve" class="text-danger"> &nbsp; RESERVE NOT MET</small></td>
+                    <td>@{{ item.bidders }}/@{{ item.bids }}</td>
+                    <td>#@{{ item.highest_bid_id }}</td>
+                    <td>$@{{ item.price }}</td>
+                    <td>$@{{ item.highest_bid_max }}</td>
                 </tr>
             </div>
             <div v-else>Currently no items</div>

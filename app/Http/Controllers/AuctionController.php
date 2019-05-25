@@ -44,12 +44,13 @@ class AuctionController extends Controller {
         $rules = ['mybid' => 'required'];
         $mesgs = ['mybid.required' => 'A bid is required.',];
         request()->validate($rules, $mesgs);
-        dd(request()->all());
+        //dd(request()->all());
 
         // Create Bid
         $newBid = request('mybid');
+        $uid = (Auth::user()->admin && request('mybidder')) ? request('mybidder') : Auth::user()->id;
         $now = Carbon::now()->toDateTimeString();
-        $bid_id = DB::table('auction_bids')->insertGetId(['aid' => $item->id, 'uid' => Auth::user()->id, 'bid' => $newBid, 'created_at' => $now, 'updated_at' => $now]);
+        $bid_id = DB::table('auction_bids')->insertGetId(['aid' => $item->id, 'uid' => $uid, 'bid' => $newBid, 'created_at' => $now, 'updated_at' => $now]);
 
         // Ensure New Bid is higher then current price
         if ($newBid > $item->price) {
@@ -60,8 +61,8 @@ class AuctionController extends Controller {
                 if ($newBid > $topBid->bid) {   // New bid is higher then previous
                     $item->price = ($item->nextBid($topBid->bid) < $newBid) ? $item->nextBid($topBid->bid) : $newBid; //;
                     $item->highest_bid = $bid_id;
-                } else
-                    $item->price = $newBid;     // New bid is less then or same as previous offer
+                } elseif ($topBid->uid != $uid)
+                    $item->price = $newBid;     // New bid is less then or same as previous offer but also not by current Top Bidder
             } else {
                 // First ever bid on item
                 $item->price = 5;

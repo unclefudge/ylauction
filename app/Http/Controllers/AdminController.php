@@ -38,6 +38,11 @@ class AdminController extends Controller {
         return view('admin/auction-live');
     }
 
+    public function auctionMax()
+    {
+        return view('admin/auction-max');
+    }
+
     /**
      * Get Items (ajax)
      */
@@ -53,11 +58,11 @@ class AdminController extends Controller {
                 'price'             => $item->price,
                 'reserve'           => $item->reserve,
                 'bids'              => $bids,
+                'bidders'           => $item->bids->groupBy('uid')->count(),
                 'highest_bid'       => $item->highest_bid,
                 'highest_bid_id'    => ($item->topBidder()) ? $item->topBidder()->bidder_id : '',
                 'highest_bid_name'  => ($item->topBidder()) ? $item->topBidder()->name : '',
-                'winner'            => ($item->topBidder() && $item->topBidder()->id == Auth::user()->id) ? 1 : 0,
-                'winner_max'        => ($item->topBidder() && $item->topBidder()->id == Auth::user()->id) ? $item->topBid->bid : 0,
+                'highest_bid_max'   => ($item->topBidder()) ? $item->topBid->bid : '',
                 'description'       => $item->description,
                 'brief_description' => $item->brief_description,
                 'image1'            => $item->img1,

@@ -46,6 +46,16 @@ class AuctionItem extends Model {
         return ($this->topBid) ? User::findOrFail($this->topBid->uid) : null;
     }
 
+    /**
+     * A AuctionItem has several bidders
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function numBidders()
+    {
+        return $this->bids->groupBy('uid')->count();
+    }
+
 
     public function nextBid($bid)
     {

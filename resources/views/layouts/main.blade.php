@@ -36,18 +36,18 @@
     <div class="dropdown float-right">
         <button class="btn dropdown-toggle" style="background: #002E4E; color: #fff" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             @if (!Auth::user()->admin)
-                <span class="badge badge-pill badge-light">{{ Auth::user()->bidder_id }}</span> &nbsp;
+                <span class="badge badge-pill badge-light">#{{ Auth::user()->bidder_id }}</span> &nbsp;
             @endif
             {{ Auth::user()->first_name }}
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="/home">Rules</a>
-            <a class="dropdown-item" href="/auctions">Auction</a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/home"><i class="fa fa-list" style="width:30px;"></i> Rules</a>
+            <a class="dropdown-item" href="/auctions"><i class="fa fa-gavel" style="width:30px;"></i> Auction</a>
             @if (Auth::user()->admin)
-                <a class="dropdown-item" href="/admin">Admin</a>
+                <a class="dropdown-item" href="/admin"><i class="fa fa-user-cog" style="width:30px;"></i>Admin</a>
             @endif
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/logout">Logout</a>
+            <a class="dropdown-item" href="/logout"><i class="fa fa-sign-out-alt" style="width:30px;"></i> Logout</a>
         </div>
     </div>
     {{--}}

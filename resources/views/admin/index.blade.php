@@ -6,6 +6,9 @@
             <h1>Auction Management</h1>
             <a class="btn btn-secondary" href="/admin/item/create" role="button">Add Item</a>
             <a class="btn btn-secondary" href="/admin/auction-live" role="button">Auction Live</a>
+            @if (Auth::user()->email == 'fudge@younglife.org.au' || true)
+                <a class="btn btn-secondary" href="/admin/auction-max" role="button">Max</a>
+            @endif
         </div>
     </div>
     <div class="container">
