@@ -32,7 +32,7 @@
         }
         @media (max-width: 500px) {
             .yllogo {
-                height: 25px
+                height: 20px
             }
         }
 
