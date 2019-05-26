@@ -48,7 +48,7 @@
             @if (!Auth::user()->admin)
                 <span class="badge badge-pill badge-light">#{{ Auth::user()->bidder_id }}</span> &nbsp;
             @endif
-            {{ Auth::user()->first_name }}
+                {{--}}{{ Auth::user()->first_name }}--}}
         </button>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="/home"><i class="fa fa-list" style="width:30px;"></i> Rules</a>
