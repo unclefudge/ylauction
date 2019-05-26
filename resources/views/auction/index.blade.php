@@ -32,7 +32,7 @@
                     <div class="col p-4 d-flex flex-column position-static">
                         <h3 class="mb-0">@{{ item.name }}</h3>
                         <div class="mb-1 text-muted">Current bid: $@{{ item.price }} &nbsp; <span v-if="item.winner == 1" class="badge badge-success">You are highest bidder</span></div>
-                        <p class="mb-auto">@{{ item.brief_description }}</p>
+                        <p class="mb-auto d-none d-sm-block">@{{ item.brief_description }}</p>
 
                     </div>
                 </div>
