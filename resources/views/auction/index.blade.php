@@ -18,6 +18,15 @@
             background: #efefef;
         }
 
+        .item-info {
+            margin: 20px;
+        }
+        @media (max-width: 500px) {
+            .item-info {
+                margin: 10px;
+            }
+        }
+
     </style>
     <div class="container" id="vue-app">
         <br>
@@ -29,7 +38,7 @@
                     <div class="col-4 d-block">
                         <img v-bind:src="item.image1" class="img-fluid">
                     </div>
-                    <div class="col p-4 d-flex flex-column position-static">
+                    <div class="col d-flex flex-column position-static item-info">
                         <h3 class="mb-0">@{{ item.name }}</h3>
                         <div class="mb-1 text-muted">Current bid: $@{{ item.price }} &nbsp; <span v-if="item.winner == 1" class="badge badge-success">You are highest bidder</span></div>
                         <p class="mb-auto d-none d-sm-block">@{{ item.brief_description }}</p>
