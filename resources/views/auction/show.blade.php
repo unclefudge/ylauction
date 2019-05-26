@@ -165,7 +165,7 @@
                 </div>
             </form>
         </div>
-        <pre>@{{ $data }}</pre>
+        <!--<pre>@{{ $data }}</pre>
     </div>
 @endsection
 
