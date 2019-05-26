@@ -61,10 +61,10 @@ class AuctionItem extends Model {
     {
         if ($bid < 100) return $bid + 5;
         if ($bid < 200) return $bid + 10;
-        if ($bid < 500) return $bid + 20;
-        if ($bid < 100) return $bid + 25;
-
-        return $this->price + 50;
+        return $bid + 20;
+        //if ($bid < 500) return $bid + 20;
+        //if ($bid < 1000) return $bid + 25;
+        //return $bid + 50;
     }
 
     /**

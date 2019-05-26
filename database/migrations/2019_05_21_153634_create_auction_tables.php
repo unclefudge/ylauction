@@ -30,8 +30,10 @@ class CreateAuctionTables extends Migration
             $table->unsignedInteger('cid')->nullable();
             $table->string('name', 255)->nullable();
             $table->text('description')->nullable();
-            $table->integer('price')->default(0);
-            $table->integer('reserve')->nullable();
+            $table->string('donated_by', 255)->nullable();
+            $table->unsignedInteger('price')->default(0);
+            $table->unsignedInteger('max')->default(0);
+            $table->unsignedInteger('reserve')->default(0);
             $table->unsignedInteger('highest_bid')->nullable();
             $table->integer('order')->nullable();
             $table->string('image1', 255)->nullable();

@@ -55,11 +55,17 @@ class AuctionController extends Controller {
         // Ensure New Bid is higher then current price
         if ($newBid > $item->price) {
 
+            // price 100  max 200  new 210  = 210
+            // price 100  max 200  new 300  = 220
+            // price 100  max 200  new 200  = 200
+
             // Determine Highest Bidder
             $topBid = $item->topBid;
             if ($topBid) {
                 if ($newBid > $topBid->bid) {   // New bid is higher then previous
-                    $item->price = ($item->nextBid($topBid->bid) < $newBid) ? $item->nextBid($topBid->bid) : $newBid; //;
+                    //if ($item->nextBid($topBid->bid) > $newBid)  // New bid higher but less then increment
+                    //    $item->price = $newBid
+                    $item->price = ($item->nextBid($topBid->bid) > $newBid) ? $newBid : $item->nextBid($topBid->bid); //
                     $item->highest_bid = $bid_id;
                 } elseif ($topBid->uid != $uid)
                     $item->price = $newBid;     // New bid is less then or same as previous offer but also not by current Top Bidder
