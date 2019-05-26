@@ -25,6 +25,9 @@
             .item-info {
                 margin: 10px;
             }
+            .item-description {
+                display: none;
+            }
         }
 
     </style>
@@ -42,7 +45,7 @@
                         <h3 class="mb-0 d-none d-sm-block">@{{ item.name }}</h3> {{-- regular --}}
                         <h4 class="mb-0 d-block d-sm-none">@{{ item.name }}</h4> {{-- mobile --}}
                         <div class="mb-1 text-muted">Current bid: $@{{ item.price }} &nbsp; <span v-if="item.winner == 1" class="badge badge-success">You are highest bidder</span></div>
-                        <p class="mb-auto d-none d-sm-block">@{{ item.brief_description }}</p>
+                        <p class="mb-auto item-description">@{{ item.brief_description }}</p>
 
                     </div>
                 </div>
