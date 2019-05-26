@@ -40,7 +40,7 @@
                     </div>
                     <div class="col d-flex flex-column position-static item-info">
                         <h3 class="mb-0 d-none d-sm-block">@{{ item.name }}</h3> {{-- regular --}}
-                        <h5 class="mb-0 d-block d-sm-none">@{{ item.name }}</h5> {{-- mobile --}}
+                        <h4 class="mb-0 d-block d-sm-none">@{{ item.name }}</h4> {{-- mobile --}}
                         <div class="mb-1 text-muted">Current bid: $@{{ item.price }} &nbsp; <span v-if="item.winner == 1" class="badge badge-success">You are highest bidder</span></div>
                         <p class="mb-auto d-none d-sm-block">@{{ item.brief_description }}</p>
 
