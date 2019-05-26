@@ -14,7 +14,7 @@
     <div class="container" id="vue-app">
         <div class="row">
             <div class="col">
-                <br><a href="/auctions" class="btn btn-outline-primary float-right"><i class="fa fa-arrow-left"></i> Return to Auction List</a>
+                <br><a href="/auctions" class="btn btn-outline-primary float-right"><i class="fa fa-arrow-left"></i> Return to Auction List</a><br><br>
             </div>
         </div>
         <div class="row featurette">
