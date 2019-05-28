@@ -52,7 +52,7 @@
                                 </h2>
                             </div>
                             <div class="col-sm-6">
-                                <small class="float-sm-right">
+                                <h4 class="float-sm-right">
                                     <span style="font-size:16px">@{{ xx.item.bids }} bids</span>
                                     <span v-if="xx.item.bids == 1" class="badge badge-pill badge-secondary">NO COMPETITION</span>
                                     <span v-if="xx.item.bids > 1 && xx.item.bids < 4" class="badge badge-pill" style="background: #FFFFD2; color:#000">SOME COMPETITION</span>
@@ -61,7 +61,7 @@
                                     <span v-if="xx.item.bids > 7 && xx.item.bids < 10" class="badge badge-pill" style="background: #FEBB56; color:#fff">GETTING HOT</span>
                                     <span v-if="xx.item.bids > 9 && xx.item.bids < 12" class="badge badge-pill" style="background: #FC592F; color:#fff">SMOKING HOT</span>
                                     <span v-if="xx.item.bids > 11" class="badge badge-pill" style="background: #FF0000; color:#fff">ITS A BID WAR</span>
-                                </small>
+                                </h4>
                             </div>
                         </div>
                         <div class="row">
@@ -78,50 +78,48 @@
                                 <span v-if="xx.item.winner == 1" class="show-mobile" style="font-size: 14px">Up to Max: $@{{ xx.item.winner_max }}</span>
                             </div>
                         </div>
-                    </div>
-                    <br>
 
-                    {{-- Auction Live --}}
-                    <div v-if="xx.item.auction_status">
-                        {{-- Admin bid on behalf --}}
-                        @if (Auth::user()->admin)
-                            <div class="row">
-                                <div class="col">
-                                    <select v-model="xx.bidder" class="custom-select form-control-lg" aria-label="Large" id="bidder" onChange="bidderName(this)" required>
-                                        <option value="">Place bid on behalf of</option>
-                                        @foreach (\App\User::where('admin', 0)->get() as $user)
-                                            <option value="{{ $user->id }}">#{{ $user->bidder_id }} &nbsp; {{ $user->name }}</option>
-                                        @endforeach
-                                    </select>
-                                    </br><br>
-                                </div>
-                            </div>
-                        @endif
-
-                        {{-- Place Bid --}}
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <label class="input-group-text" for="bid">$</label>
+                        {{-- Auction Live --}}
+                        <div v-if="xx.item.auction_status">
+                            {{-- Admin bid on behalf --}}
+                            @if (Auth::user()->admin)
+                                <div class="row">
+                                    <div class="col">
+                                        <select v-model="xx.bidder" class="custom-select form-control-lg" aria-label="Large" id="bidder" onChange="bidderName(this)" required>
+                                            <option value="">Place bid on behalf of</option>
+                                            @foreach (\App\User::where('admin', 0)->get() as $user)
+                                                <option value="{{ $user->id }}">#{{ $user->bidder_id }} &nbsp; {{ $user->name }}</option>
+                                            @endforeach
+                                        </select>
+                                        </br><br>
                                     </div>
-                                    <input v-model="xx.bid" type="text" class="form-control form-control-lg allownumericwithoutdecimal" name="bid" id="bid" required="">
                                 </div>
-                                Enter $@{{ xx.item.bid_min  }} or more
-                            </div>
-                            <div class="col-md-6">
-                                <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#confirmModal">Place bid</button>
+                            @endif
+
+                            {{-- Place Bid --}}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-group mb-1 mt-3">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="bid">$</label>
+                                        </div>
+                                        <input v-model="xx.bid" type="text" class="form-control form-control-lg allownumericwithoutdecimal" name="bid" id="bid" required="">
+                                    </div>
+                                    Enter $@{{ xx.item.bid_min  }} or more
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-block btn-lg btn-primary mt-3" data-toggle="modal" data-target="#confirmModal">Place bid</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    {{-- Auction Paused --}}
-                    <div v-else>
-                        <h3>
-                            <span class="badge badge-pill badge-warning">Auction currently paused</span>
-                        </h3>
+                        {{-- Auction Paused --}}
+                        <div v-else>
+                            <h3>
+                                <span class="badge badge-pill badge-warning">Auction currently paused</span>
+                            </h3>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
