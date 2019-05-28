@@ -85,18 +85,22 @@
                     <div v-if="xx.item.auction_status">
                         {{-- Admin bid on behalf --}}
                         @if (Auth::user()->admin)
-                            <select v-model="xx.bidder" class="custom-select form-control-lg" aria-label="Large" id="bidder" onChange="bidderName(this)" required>
-                                <option value="">Place bid on behalf of</option>
-                                @foreach (\App\User::where('admin', 0)->get() as $user)
-                                    <option value="{{ $user->id }}">#{{ $user->bidder_id }} &nbsp; {{ $user->name }}</option>
-                                @endforeach
-                            </select>
-                            </br><br>
+                            <div class="row">
+                                <div class="col">
+                                    <select v-model="xx.bidder" class="custom-select form-control-lg" aria-label="Large" id="bidder" onChange="bidderName(this)" required>
+                                        <option value="">Place bid on behalf of</option>
+                                        @foreach (\App\User::where('admin', 0)->get() as $user)
+                                            <option value="{{ $user->id }}">#{{ $user->bidder_id }} &nbsp; {{ $user->name }}</option>
+                                        @endforeach
+                                    </select>
+                                    </br><br>
+                                </div>
+                            </div>
                         @endif
 
                         {{-- Place Bid --}}
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <label class="input-group-text" for="bid">$</label>
@@ -105,7 +109,7 @@
                                 </div>
                                 Enter $@{{ xx.item.bid_min  }} or more
                             </div>
-                            <div class="col-6">
+                            <div class="col-md-6">
                                 <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#confirmModal">Place bid</button>
                             </div>
                         </div>
