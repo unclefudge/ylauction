@@ -101,7 +101,7 @@
                 theme: 'snow',
                 modules: {
                     toolbar: [
-                        [{ header: [1, 2, false] }],
+                        [{ header: [1, 2, 3] }],
                         ['bold', 'italic', 'underline'],
                         [{ 'color': [] }, { 'background': [] }],
                         [{ 'align': [] }, { 'list': 'ordered'}, { 'list': 'bullet' }],
