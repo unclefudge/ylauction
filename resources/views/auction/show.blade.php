@@ -60,7 +60,9 @@
                                 </small>
                             </h2>
                             <p>Lead bidder: #@{{ xx.item.highest_bid_id }} <span v-if="xx.item.reserve && xx.item.price < xx.item.reserve" class="text-danger"> &nbsp; RESERVE NOT MET</span></p>
-                            <h4 v-if="xx.item.winner == 1"><span class="badge badge-success">You are highest bidder</span> &nbsp; <span style="font-size: 14px">Up to Max: $@{{ xx.item.winner_max }}</span></h4>
+                            <h4 v-if="xx.item.winner == 1"><span class="badge badge-success">You are highest bidder</span> &nbsp;
+                                <span class="show-mobile"><br></span>
+                                <span style="font-size: 14px">Up to Max: $@{{ xx.item.winner_max }}</span></h4>
 
                         </div>
                         <br>

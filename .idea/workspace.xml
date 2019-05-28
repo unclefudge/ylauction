@@ -65,45 +65,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/auction/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="100" column="85" selection-start-line="100" selection-start-column="85" selection-end-line="100" selection-end-column="85" />
+            <state vertical-scroll-proportion="0.57176656">
+              <caret line="63" column="62" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
               <folding>
                 <element signature="e#597#635#0#HTML" expanded="true" />
-                <marker date="1559016134597" expanded="true" signature="11202:12043" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="11215:12042" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="11224:12042" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="11268:11360" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="11281:11359" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="11392:11484" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="11405:11483" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="11516:11608" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="11529:11607" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="11640:11732" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="11653:11731" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="11784:12030" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="11825:12029" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="11954:12015" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="12081:12214" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="12294:12340" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="12405:12475" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="12495:12614" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="12691:12779" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="12823:12982" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="13033:13241" placeholder="..." />
-                <marker date="1559016134597" expanded="true" signature="13109:13208" placeholder="..." />
+                <element signature="e#4146#4169#0#HTML" expanded="true" />
+                <marker date="1559016987434" expanded="true" signature="11304:12145" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="11317:12144" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="11326:12144" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="11370:11462" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="11383:11461" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="11494:11586" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="11507:11585" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="11618:11710" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="11631:11709" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="11742:11834" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="11755:11833" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="11886:12132" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="11927:12131" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="12056:12117" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="12183:12316" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="12396:12442" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="12507:12577" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="12597:12716" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="12793:12881" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="12925:13084" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="13135:13343" placeholder="..." />
+                <marker date="1559016987434" expanded="true" signature="13211:13310" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auction-live.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="auction-live.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/auction-live.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8083596">
-              <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -113,7 +114,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/auction/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="90" selection-start-line="47" selection-start-column="90" selection-end-line="47" selection-end-column="90" />
+              <caret line="30" column="9" selection-start-line="23" selection-start-column="8" selection-end-line="30" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -124,6 +125,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="109" column="22" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -150,7 +161,6 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_21_153634_create_auction_tables.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/main.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuctionItemController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/items/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
@@ -167,8 +177,9 @@
         <option value="$PROJECT_DIR$/resources/views/admin/items/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/AuctionItem.php" />
-        <option value="$PROJECT_DIR$/resources/views/auction/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/auction-live.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/main.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/auction/show.blade.php" />
       </list>
     </option>
   </component>
@@ -849,14 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23535565">
-          <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuctionItemController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -994,10 +997,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/auction-live.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auction/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="90" selection-start-line="47" selection-start-column="90" selection-end-line="47" selection-end-column="90" />
+          <caret line="30" column="9" selection-start-line="23" selection-start-column="8" selection-end-line="30" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1010,43 +1021,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auction/show.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="85" selection-start-line="100" selection-start-column="85" selection-end-line="100" selection-end-column="85" />
-          <folding>
-            <element signature="e#597#635#0#HTML" expanded="true" />
-            <marker date="1559016134597" expanded="true" signature="11202:12043" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="11215:12042" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="11224:12042" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="11268:11360" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="11281:11359" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="11392:11484" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="11405:11483" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="11516:11608" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="11529:11607" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="11640:11732" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="11653:11731" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="11784:12030" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="11825:12029" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="11954:12015" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="12081:12214" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="12294:12340" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="12405:12475" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="12495:12614" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="12691:12779" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="12823:12982" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="13033:13241" placeholder="..." />
-            <marker date="1559016134597" expanded="true" signature="13109:13208" placeholder="..." />
-          </folding>
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/auction-live.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/auction/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8083596">
-          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
-          <folding />
+        <state vertical-scroll-proportion="0.57176656">
+          <caret line="63" column="62" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
+          <folding>
+            <element signature="e#597#635#0#HTML" expanded="true" />
+            <element signature="e#4146#4169#0#HTML" expanded="true" />
+            <marker date="1559016987434" expanded="true" signature="11304:12145" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="11317:12144" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="11326:12144" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="11370:11462" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="11383:11461" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="11494:11586" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="11507:11585" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="11618:11710" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="11631:11709" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="11742:11834" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="11755:11833" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="11886:12132" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="11927:12131" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="12056:12117" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="12183:12316" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="12396:12442" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="12507:12577" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="12597:12716" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="12793:12881" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="12925:13084" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="13135:13343" placeholder="..." />
+            <marker date="1559016987434" expanded="true" signature="13211:13310" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -29,9 +29,25 @@
             height: 35px
         }
 
+        .show-mobile {
+            display: none;
+        }
+
+        .hide-mobile {
+            display: block;
+        }
+
         @media (max-width: 500px) {
             .yllogo {
                 height: 25px
+            }
+
+            .show-mobile {
+                display: block;
+            }
+
+            .hide-mobile {
+                display: none;
             }
         }
 
