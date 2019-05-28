@@ -3,7 +3,7 @@
 @section('content')
     <div class="container" id="vue-app">
         <br>
-        <h3 class="mb-3">Auction Items <small v-if="xx.items[0].auction_status == 0" class="badge badge-pill badge-warning ml-3">PAUSED</small></h3>
+        <h3 class="mb-3">Auction Items <small v-if="xx.auction_status == 0" class="badge badge-pill badge-warning ml-3">PAUSED</small></h3>
 
         <table class="table table-hover">
             <thead>
@@ -42,8 +42,7 @@
     <script src="/js/vue.min.js"></script>
     <script type="text/javascript">
         var xx = {
-            params: {date: '', supervisor_id: '', site_id: '', site_start: '', trade_id: '', _token: $('meta[name=token]').attr('value')},
-            items: [],
+            auction_status: 1, items: [],
         };
 
         new Vue({
@@ -55,7 +54,7 @@
                 loadData: function () {
                     $.getJSON('/data/auction-items', function (data) {
                         this.xx.items = data;
-                        //this.xx.searching = false;
+                        this.xx.auction_status = data[0].auction_status;
                     }.bind(this));
                 },
                 viewItem: function (item) {
