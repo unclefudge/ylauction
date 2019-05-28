@@ -98,7 +98,7 @@
                         {{-- Auction Paused --}}
                         <div v-else>
                             <h3>
-                                <span class="badge badge-pill badge-warning">Auction is currently paused</span>
+                                <span class="badge badge-pill badge-warning">Auction currently paused</span>
                             </h3>
                         </div>
 

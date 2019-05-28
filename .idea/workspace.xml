@@ -65,35 +65,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/auction/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.6111987">
+              <caret line="100" column="85" selection-start-line="100" selection-start-column="85" selection-end-line="100" selection-end-column="85" />
               <folding>
                 <element signature="e#597#635#0#HTML" expanded="true" />
-                <marker date="1559005235487" expanded="true" signature="11205:12046" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="11218:12045" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="11227:12045" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="11271:11363" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="11284:11362" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="11395:11487" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="11408:11486" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="11519:11611" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="11532:11610" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="11643:11735" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="11656:11734" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="11787:12033" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="11828:12032" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="11957:12018" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="12084:12217" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="12297:12343" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="12408:12478" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="12498:12617" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="12694:12782" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="12826:12985" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="13036:13244" placeholder="..." />
-                <marker date="1559005235487" expanded="true" signature="13112:13211" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="11202:12043" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="11215:12042" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="11224:12042" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="11268:11360" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="11281:11359" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="11392:11484" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="11405:11483" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="11516:11608" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="11529:11607" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="11640:11732" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="11653:11731" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="11784:12030" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="11825:12029" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="11954:12015" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="12081:12214" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="12294:12340" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="12405:12475" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="12495:12614" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="12691:12779" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="12823:12982" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="13033:13241" placeholder="..." />
+                <marker date="1559016134597" expanded="true" signature="13109:13208" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -109,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuctionItem.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AuctionItem.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/AuctionItem.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6309148">
+            <state vertical-scroll-proportion="0.0">
               <caret line="109" column="22" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
               <folding />
             </state>
@@ -150,7 +150,6 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/auction-max.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/auction/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auction/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/auction-live.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuctionController.php" />
@@ -159,6 +158,7 @@
         <option value="$PROJECT_DIR$/resources/views/admin/items/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/AuctionItem.php" />
+        <option value="$PROJECT_DIR$/resources/views/auction/show.blade.php" />
       </list>
     </option>
   </component>
@@ -984,38 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auction/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding>
-            <element signature="e#597#635#0#HTML" expanded="true" />
-            <marker date="1559005235487" expanded="true" signature="11205:12046" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="11218:12045" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="11227:12045" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="11271:11363" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="11284:11362" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="11395:11487" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="11408:11486" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="11519:11611" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="11532:11610" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="11643:11735" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="11656:11734" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="11787:12033" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="11828:12032" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="11957:12018" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="12084:12217" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="12297:12343" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="12408:12478" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="12498:12617" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="12694:12782" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="12826:12985" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="13036:13244" placeholder="..." />
-            <marker date="1559005235487" expanded="true" signature="13112:13211" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/auction-live.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3548896">
@@ -1034,9 +1002,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/AuctionItem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6309148">
+        <state vertical-scroll-proportion="0.0">
           <caret line="109" column="22" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auction/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6111987">
+          <caret line="100" column="85" selection-start-line="100" selection-start-column="85" selection-end-line="100" selection-end-column="85" />
+          <folding>
+            <element signature="e#597#635#0#HTML" expanded="true" />
+            <marker date="1559016134597" expanded="true" signature="11202:12043" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="11215:12042" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="11224:12042" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="11268:11360" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="11281:11359" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="11392:11484" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="11405:11483" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="11516:11608" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="11529:11607" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="11640:11732" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="11653:11731" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="11784:12030" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="11825:12029" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="11954:12015" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="12081:12214" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="12294:12340" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="12405:12475" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="12495:12614" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="12691:12779" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="12823:12982" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="13033:13241" placeholder="..." />
+            <marker date="1559016134597" expanded="true" signature="13109:13208" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
