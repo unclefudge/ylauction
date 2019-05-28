@@ -18,12 +18,12 @@
             <tbody>
             <div v-if="xx.items">
                 <tr v-for="item in xx.items">
-                    <td><h4>$@{{ item.price }}</h4></td>
-                    <td><h4>@{{ item.name }} <small v-if="item.reserve && item.price < item.reserve" class="text-danger"> &nbsp; RESERVE NOT MET</small></h4></td>
-                    <td><h4>@{{ item.bids }}</h4></td>
-                    <td><h4 v-if="item.highest_bid_id">#@{{ item.highest_bid_id }}</h4></td>
+                    <td><h3>$@{{ item.price }}</h3></td>
+                    <td><h3>@{{ item.name }} <small v-if="item.reserve && item.price < item.reserve" class="text-danger"> &nbsp; RESERVE NOT MET</small></h3></td>
+                    <td><h3>@{{ item.bids }}</h3></td>
+                    <td><h3 v-if="item.highest_bid_id">#@{{ item.highest_bid_id }}</h3></td>
                     <td>
-                        <h4>
+                        <h3>
                             <span v-if="item.bids == 1" class="badge badge-pill badge-secondary">NO COMPETITION</span>
                             <span v-if="item.bids > 1 && item.bids < 4" class="badge badge-pill" style="background: #FFFFD2; color:#000">SOME COMPETITION</span>
                             <span v-if="item.bids > 3 && item.bids < 6" class="badge badge-pill" style="background: #FFF0AA; color:#000">SOME ACTION</span>
@@ -31,7 +31,7 @@
                             <span v-if="item.bids > 7 && item.bids < 10" class="badge badge-pill" style="background: #FEBB56; color:#fff">GETTING HOT</span>
                             <span v-if="item.bids > 9 && item.bids < 11" class="badge badge-pill" style="background: #FC592F; color:#fff">SMOKING HOT</span>
                             <span v-if="item.bids > 11" class="badge badge-pill" style="background: #FF0000; color:#fff">ITS A BID WAR</span>
-                        </h4>
+                        </h3>
                     </td>
                 </tr>
             </div>
