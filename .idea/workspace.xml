@@ -65,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/auction/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6111987">
+            <state vertical-scroll-proportion="0.0">
               <caret line="100" column="85" selection-start-line="100" selection-start-column="85" selection-end-line="100" selection-end-column="85" />
               <folding>
                 <element signature="e#597#635#0#HTML" expanded="true" />
@@ -95,6 +95,16 @@
                 <marker date="1559016134597" expanded="true" signature="13033:13241" placeholder="..." />
                 <marker date="1559016134597" expanded="true" signature="13109:13208" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auction-live.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/auction-live.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8083596">
+              <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,7 +161,6 @@
         <option value="$PROJECT_DIR$/resources/views/admin/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/auction-max.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auction/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/auction-live.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuctionController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/items/edit.blade.php" />
@@ -159,6 +168,7 @@
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/AuctionItem.php" />
         <option value="$PROJECT_DIR$/resources/views/auction/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/auction-live.blade.php" />
       </list>
     </option>
   </component>
@@ -984,14 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/auction-live.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3548896">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auction/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1010,7 +1012,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auction/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6111987">
+        <state vertical-scroll-proportion="0.0">
           <caret line="100" column="85" selection-start-line="100" selection-start-column="85" selection-end-line="100" selection-end-column="85" />
           <folding>
             <element signature="e#597#635#0#HTML" expanded="true" />
@@ -1037,6 +1039,14 @@
             <marker date="1559016134597" expanded="true" signature="13033:13241" placeholder="..." />
             <marker date="1559016134597" expanded="true" signature="13109:13208" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/auction-live.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8083596">
+          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

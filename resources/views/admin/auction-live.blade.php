@@ -39,7 +39,7 @@
             </tbody>
         </table>
 
-        <pre>@{{ $data }}</pre>
+        <!--<pre>@{{ $data }}</pre>
         -->
     </div>
 @endsection
