@@ -12,7 +12,7 @@
                 <th scope="col">Item</th>
                 <th scope="col" width="10%">Bids</th>
                 <th scope="col" width="10%">Winner</th>
-                <th scope="col">Status</th>
+                <th scope="col">Status1</th>
             </tr>
             </thead>
             <tbody>
