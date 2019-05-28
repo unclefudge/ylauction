@@ -44,11 +44,15 @@
                         <h5 class="card-subtitle text-muted pt-1">Donated by {{ $item->donated_by }}</h5>
                     </div>
                     <div class="card-body">
-                        <div>
-                            <h2 class="card-title pricing-card-title">
-                                <small class="text-muted">Current bid:</small>
-                                $@{{ xx.item.price }}
-                                <small class="float-right">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h2 class="card-title pricing-card-title">
+                                    <small class="text-muted">Current bid:</small>
+                                    $@{{ xx.item.price }}
+                                </h2>
+                            </div>
+                            <div class="col-sm-6">
+                                <small class="float-sm-right">
                                     <span style="font-size:16px">@{{ xx.item.bids }} bids</span>
                                     <span v-if="xx.item.bids == 1" class="badge badge-pill badge-secondary">NO COMPETITION</span>
                                     <span v-if="xx.item.bids > 1 && xx.item.bids < 4" class="badge badge-pill" style="background: #FFFFD2; color:#000">SOME COMPETITION</span>
@@ -58,133 +62,143 @@
                                     <span v-if="xx.item.bids > 9 && xx.item.bids < 12" class="badge badge-pill" style="background: #FC592F; color:#fff">SMOKING HOT</span>
                                     <span v-if="xx.item.bids > 11" class="badge badge-pill" style="background: #FF0000; color:#fff">ITS A BID WAR</span>
                                 </small>
-                            </h2>
-                            <p>Lead bidder: #@{{ xx.item.highest_bid_id }} <span v-if="xx.item.reserve && xx.item.price < xx.item.reserve" class="text-danger"> &nbsp; RESERVE NOT MET</span></p>
-                            <h4 v-if="xx.item.winner == 1"><span class="badge badge-success">You are highest bidder</span> &nbsp;
-                                <span class="show-mobile"><br></span>
-                                <span style="font-size: 14px">Up to Max: $@{{ xx.item.winner_max }}</span></h4>
-
-                        </div>
-                        <br>
-
-                        {{-- Auction Live --}}
-                        <div v-if="xx.item.auction_status">
-                            {{-- Admin bid on behalf --}}
-                            @if (Auth::user()->admin)
-                                <select v-model="xx.bidder" class="custom-select form-control-lg" aria-label="Large" id="bidder" onChange="bidderName(this)" required>
-                                    <option value="">Place bid on behalf of</option>
-                                    @foreach (\App\User::where('admin', 0)->get() as $user)
-                                        <option value="{{ $user->id }}">#{{ $user->bidder_id }} &nbsp; {{ $user->name }}</option>
-                                    @endforeach
-                                </select>
-                                </br><br>
-                            @endif
-
-                            {{-- Place Bid --}}
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <label class="input-group-text" for="bid">$</label>
-                                        </div>
-                                        <input v-model="xx.bid" type="text" class="form-control form-control-lg allownumericwithoutdecimal" name="bid" id="bid" required="">
-                                    </div>
-                                    Enter $@{{ xx.item.bid_min  }} or more
-                                </div>
-                                <div class="col-6">
-                                    <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#confirmModal">Place bid</button>
-                                </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Lead bidder: #@{{ xx.item.highest_bid_id }} <span v-if="xx.item.reserve && xx.item.price < xx.item.reserve" class="text-danger"> &nbsp; RESERVE NOT MET</span></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <h4 v-if="xx.item.winner == 1"><span class="badge badge-success">You are highest bidder</span> &nbsp;
+                                    <span v-if="xx.item.winner == 1" class="hide-mobile" style="font-size: 14px">Up to Max: $@{{ xx.item.winner_max }}</span></h4>
+                            </div>
+                            <div class="col-sm-3">
+                                <span v-if="xx.item.winner == 1" class="show-mobile" style="font-size: 14px">Up to Max: $@{{ xx.item.winner_max }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
 
-                        {{-- Auction Paused --}}
+                    {{-- Auction Live --}}
+                    <div v-if="xx.item.auction_status">
+                        {{-- Admin bid on behalf --}}
+                        @if (Auth::user()->admin)
+                            <select v-model="xx.bidder" class="custom-select form-control-lg" aria-label="Large" id="bidder" onChange="bidderName(this)" required>
+                                <option value="">Place bid on behalf of</option>
+                                @foreach (\App\User::where('admin', 0)->get() as $user)
+                                    <option value="{{ $user->id }}">#{{ $user->bidder_id }} &nbsp; {{ $user->name }}</option>
+                                @endforeach
+                            </select>
+                            </br><br>
+                        @endif
+
+                        {{-- Place Bid --}}
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" for="bid">$</label>
+                                    </div>
+                                    <input v-model="xx.bid" type="text" class="form-control form-control-lg allownumericwithoutdecimal" name="bid" id="bid" required="">
+                                </div>
+                                Enter $@{{ xx.item.bid_min  }} or more
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#confirmModal">Place bid</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Auction Paused --}}
+                    <div v-else>
+                        <h3>
+                            <span class="badge badge-pill badge-warning">Auction currently paused</span>
+                        </h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="row">
+        <div class="col">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h3 class="my-0 font-weight-normal">Description</h3>
+                </div>
+                <div class="card-body">
+                    {!! $item->description !!}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Confirm bid Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <form method="POST" action="/auctions/{{ $item->id }}">
+            {{ method_field('PATCH') }}
+            {{ csrf_field() }}
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-white" v-bind:class="modalClass()">
+                        <h5 class="modal-title" id="exampleModalLabel">{{ $item->name }}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <input v-model="xx.bid" name="mybid" type="hidden" value="">
+                        <input v-model="xx.bidder" name="mybidder" type="hidden" value="">
+                        <div v-if="xx.admin == 1 && !xx.bidder">
+                            {{-- Admin - but no bidder given --}}
+                            <h4 class="text-danger">Must select a bidder to place bid</h4>
+                            <h4 class="text-primary">{{ $item->name }}</h4>
+                            <br>
+                        </div>
                         <div v-else>
-                            <h3>
-                                <span class="badge badge-pill badge-warning">Auction currently paused</span>
-                            </h3>
-                        </div>
+                            {{-- Confirm bid --}}
+                            <div v-if="xx.bid >= xx.item.bid_min">
+                                <h4>Please confirm your bid for</h4>
+                                <h4 class="text-primary">{{ $item->name }}</h4>
+                                @if (Auth::user()->admin)
+                                    <h4><span class="badge badge-info">on behalf of @{{ xx.bidder_name }}</span></h4>
+                                @endif
 
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <br>
-        <div class="row">
-            <div class="col">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header">
-                        <h3 class="my-0 font-weight-normal">Description</h3>
-                    </div>
-                    <div class="card-body">
-                        {!! $item->description !!}
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Confirm bid Modal -->
-        <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <form method="POST" action="/auctions/{{ $item->id }}">
-                {{ method_field('PATCH') }}
-                {{ csrf_field() }}
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header text-white" v-bind:class="modalClass()">
-                            <h5 class="modal-title" id="exampleModalLabel">{{ $item->name }}</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body text-center">
-                            <input v-model="xx.bid" name="mybid" type="hidden" value="">
-                            <input v-model="xx.bidder" name="mybidder" type="hidden" value="">
-                            <div v-if="xx.admin == 1 && !xx.bidder">
-                                {{-- Admin - but no bidder given --}}
-                                <h4 class="text-danger">Must select a bidder to place bid</h4>
+                                <br>
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-6 border p-3"><h3>$@{{ xx.bid }}</h3></div>
+                                </div>
+                            </div>
+                            {{-- Insufficient bid --}}
+                            <div v-else>
+                                <h4 class="text-danger">Insufficient bid for</h4>
                                 <h4 class="text-primary">{{ $item->name }}</h4>
                                 <br>
-                            </div>
-                            <div v-else>
-                                {{-- Confirm bid --}}
-                                <div v-if="xx.bid >= xx.item.bid_min">
-                                    <h4>Please confirm your bid for</h4>
-                                    <h4 class="text-primary">{{ $item->name }}</h4>
-                                    @if (Auth::user()->admin)
-                                        <h4><span class="badge badge-info">on behalf of @{{ xx.bidder_name }}</span></h4>
-                                    @endif
-
-                                    <br>
-                                    <div class="row d-flex justify-content-center">
-                                        <div class="col-6 border p-3"><h3>$@{{ xx.bid }}</h3></div>
-                                    </div>
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-9 border p-3"><h3>Minimum bid $@{{ xx.item.bid_min }}</h3></div>
                                 </div>
-                                {{-- Insufficient bid --}}
-                                <div v-else>
-                                    <h4 class="text-danger">Insufficient bid for</h4>
-                                    <h4 class="text-primary">{{ $item->name }}</h4>
-                                    <br>
-                                    <div class="row d-flex justify-content-center">
-                                        <div class="col-9 border p-3"><h3>Minimum bid $@{{ xx.item.bid_min }}</h3></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer bg-light">
-                            <div v-if="xx.admin == 1 && !xx.bidder || xx.bid < xx.item.bid_min">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">I Understand</button>
-                            </div>
-                            <div v-else>
-                                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-primary">Confirm bid</button>
                             </div>
                         </div>
                     </div>
+                    <div class="modal-footer bg-light">
+                        <div v-if="xx.admin == 1 && !xx.bidder || xx.bid < xx.item.bid_min">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">I Understand</button>
+                        </div>
+                        <div v-else>
+                            <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Confirm bid</button>
+                        </div>
+                    </div>
                 </div>
-            </form>
-        </div>
-        <!--<pre>@{{ $data }}</pre>-->
+            </div>
+        </form>
+    </div>
+    <!--<pre>@{{ $data }}</pre>-->
     </div>
 @endsection
 

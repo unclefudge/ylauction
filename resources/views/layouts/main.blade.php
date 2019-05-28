@@ -34,7 +34,7 @@
         }
 
         .hide-mobile {
-            display: block;
+            display: inline;
         }
 
         @media (max-width: 500px) {
@@ -43,7 +43,7 @@
             }
 
             .show-mobile {
-                display: block;
+                display: inline;
             }
 
             .hide-mobile {
