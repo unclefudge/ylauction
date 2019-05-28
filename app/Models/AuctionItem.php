@@ -107,7 +107,7 @@ class AuctionItem extends Model {
      */
     public function getBriefDescriptionAttribute()
     {
-        return substr($this->brief, 0, 70) . "....";
+        return (count($this->brief) > 70) ? substr($this->brief, 0, 70) . "...." : $this->brief;
     }
 
 
