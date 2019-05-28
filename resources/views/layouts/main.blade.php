@@ -17,8 +17,6 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link href="{{ asset('css/summernote-bs4.css') }}" rel="stylesheet">
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
     @yield('page-styles')
 
@@ -30,6 +28,7 @@
         .yllogo {
             height: 35px
         }
+
         @media (max-width: 500px) {
             .yllogo {
                 height: 25px
@@ -45,10 +44,12 @@
     <a class="navbar-brand" href="/auctions"><img src="/img/yl-logo.png" class="yllogo"></a>
     <div class="dropdown float-right">
         <button class="btn dropdown-toggle" style="background: #002E4E; color: #fff" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            @if (!Auth::user()->admin)
+            @if (Auth::user()->admin)
+                {{ Auth::user()->firstname }}
+            @else
                 <span class="badge badge-pill badge-light">#{{ Auth::user()->bidder_id }}</span> &nbsp;
             @endif
-                {{--}}{{ Auth::user()->first_name }}--}}
+            {{--}}{{ Auth::user()->first_name }}--}}
         </button>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="/home"><i class="fa fa-list" style="width:30px;"></i> Rules</a>

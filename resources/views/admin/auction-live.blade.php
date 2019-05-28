@@ -3,14 +3,15 @@
 @section('content')
     <div class="container-fluid" id="vue-app">
         <br>
-        <h1 class="mb-3 text-center">Auction Live</h1>
+        <h1 class="mb-3 text-center">Auction Live <small v-if="xx.items && xx.items[0].auction_status == 0" class="badge badge-pill badge-warning ml-3">PAUSED</small></h1>
 
         <table class="table table-hover">
             <thead>
             <tr>
                 <th scope="col" width="10%">Price</th>
                 <th scope="col">Item</th>
-                <th scope="col" width="10%">Bidder</th>
+                <th scope="col" width="10%">Bids</th>
+                <th scope="col" width="10%">Winner</th>
                 <th scope="col">Status</th>
             </tr>
             </thead>
@@ -19,10 +20,12 @@
                 <tr v-for="item in xx.items">
                     <td><h4>$@{{ item.price }}</h4></td>
                     <td><h4>@{{ item.name }} <small v-if="item.reserve && item.price < item.reserve" class="text-danger"> &nbsp; RESERVE NOT MET</small></h4></td>
-                    <td><h4>#@{{ item.highest_bid_id }}</h4></td>
+                    <td><h4>@{{ item.bids }}</h4></td>
+                    <td><h4 v-if="item.highest_bid_id">#@{{ item.highest_bid_id }}</h4></td>
                     <td>
                         <h4>
-                            <span v-if="item.bids > 1 && item.bids < 4" class="badge badge-pill" style="background: #FFFFD2; color:#000">LITTLE COMPETITION</span>
+                            <span v-if="item.bids == 1" class="badge badge-pill badge-secondary">NO COMPETITION</span>
+                            <span v-if="item.bids > 1 && item.bids < 4" class="badge badge-pill" style="background: #FFFFD2; color:#000">SOME COMPETITION</span>
                             <span v-if="item.bids > 3 && item.bids < 6" class="badge badge-pill" style="background: #FFF0AA; color:#000">SOME ACTION</span>
                             <span v-if="item.bids > 5 && item.bids < 8" class="badge badge-pill" style="background: #FEDE81; color:#000">WARMING UP</span>
                             <span v-if="item.bids > 7 && item.bids < 10" class="badge badge-pill" style="background: #FEBB56; color:#fff">GETTING HOT</span>
@@ -36,7 +39,7 @@
             </tbody>
         </table>
 
-        <!--<pre>@{{ $data }}</pre>
+        <pre>@{{ $data }}</pre>
         -->
     </div>
 @endsection

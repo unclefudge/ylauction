@@ -25,7 +25,13 @@ class AuctionItemController extends Controller {
 
     public function show($id)
     {
-        //
+        // Check authorisation
+        if (!Auth::user()->admin)
+            return abort(404);
+
+        $item = AuctionItem::findOrFail($id);
+
+        return view('admin/items/show', compact('item'));
     }
 
     /**
@@ -64,10 +70,10 @@ class AuctionItemController extends Controller {
             return abort(404);
 
         // Validate
-        $rules = ['name' => 'required', 'description' => 'required', 'image1' => 'required_without:image2,image3,image4'];
+        $rules = ['name' => 'required', 'brief' => 'required', 'image1' => 'required_without:image2,image3,image4'];
         $mesgs = [
             'name.required'           => 'The name is required.',
-            'description.required'    => 'The description is required.',
+            'brief.required'          => 'The brief description is required.',
             'image1.required_without' => 'At least one image is required.',
         ];
         request()->validate($rules, $mesgs);
@@ -99,10 +105,10 @@ class AuctionItemController extends Controller {
         $item = AuctionItem::findOrFail($id);
 
         // Validate
-        $rules = ['name' => 'required', 'description' => 'required',];
+        $rules = ['name' => 'required', 'brief' => 'required',];
         $mesgs = [
-            'name.required'        => 'The name is required.',
-            'description.required' => 'The description is required.',
+            'name.required'  => 'The name is required.',
+            'brief.required' => 'The brief description is required.',
         ];
         request()->validate($rules, $mesgs);
 

@@ -3,7 +3,7 @@
 @section('content')
     <div class="container" id="vue-app">
         <br>
-        <h3 class="mb-3">Auction Items</h3>
+        <h3 class="mb-3">Auction Items <small v-if="xx.items[0].auction_status == 0" class="badge badge-pill badge-warning ml-3">PAUSED</small></h3>
 
         <table class="table table-hover">
             <thead>

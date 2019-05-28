@@ -19,7 +19,7 @@
         </div>
         <div class="row featurette">
             <div class="col-md-4 text-center">
-                <div style="padding: 5px;">
+                <div style="padding: 5px; margin-top: 10px">
                     <img src="{{ $item->img1 }}" class="img-fluid" id="big_image">
                 </div>
 
@@ -41,6 +41,7 @@
                 <div class="card mb-4 shadow-sm mt-3">
                     <div class="card-header">
                         <h1 class="my-0 font-weight-normal">{{ $item->name }}</h1>
+                        <h5 class="card-subtitle text-muted pt-1">Donated by {{ $item->donated_by }}</h5>
                     </div>
                     <div class="card-body">
                         <div>
@@ -49,7 +50,8 @@
                                 $@{{ xx.item.price }}
                                 <small class="float-right">
                                     <span style="font-size:16px">@{{ xx.item.bids }} bids</span>
-                                    <span v-if="xx.item.bids > 1 && xx.item.bids < 4" class="badge badge-pill" style="background: #FFFFD2; color:#000">LITTLE COMPETITION</span>
+                                    <span v-if="xx.item.bids == 1" class="badge badge-pill badge-secondary">NO COMPETITION</span>
+                                    <span v-if="xx.item.bids > 1 && xx.item.bids < 4" class="badge badge-pill" style="background: #FFFFD2; color:#000">SOME COMPETITION</span>
                                     <span v-if="xx.item.bids > 3 && xx.item.bids < 6" class="badge badge-pill" style="background: #FFF0AA; color:#000">SOME ACTION</span>
                                     <span v-if="xx.item.bids > 5 && xx.item.bids < 8" class="badge badge-pill" style="background: #FEDE81; color:#000">WARMING UP</span>
                                     <span v-if="xx.item.bids > 7 && xx.item.bids < 10" class="badge badge-pill" style="background: #FEBB56; color:#fff">GETTING HOT</span>
@@ -63,30 +65,43 @@
                         </div>
                         <br>
 
-                        @if (Auth::user()->admin)
-                            <select v-model="xx.bidder" class="custom-select form-control-lg" aria-label="Large" id="bidder" onChange="bidderName(this)" required>
-                                <option value="">Place bid on behalf of</option>
-                                @foreach (\App\User::where('admin', 0)->get() as $user)
-                                    <option value="{{ $user->id }}">#{{ $user->bidder_id }} &nbsp; {{ $user->name }}</option>
-                                @endforeach
-                            </select>
-                            </br><br>
-                        @endif
+                        {{-- Auction Live --}}
+                        <div v-if="xx.item.auction_status">
+                            {{-- Admin bid on behalf --}}
+                            @if (Auth::user()->admin)
+                                <select v-model="xx.bidder" class="custom-select form-control-lg" aria-label="Large" id="bidder" onChange="bidderName(this)" required>
+                                    <option value="">Place bid on behalf of</option>
+                                    @foreach (\App\User::where('admin', 0)->get() as $user)
+                                        <option value="{{ $user->id }}">#{{ $user->bidder_id }} &nbsp; {{ $user->name }}</option>
+                                    @endforeach
+                                </select>
+                                </br><br>
+                            @endif
 
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <label class="input-group-text" for="bid">$</label>
+                            {{-- Place Bid --}}
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="bid">$</label>
+                                        </div>
+                                        <input v-model="xx.bid" type="text" class="form-control form-control-lg allownumericwithoutdecimal" name="bid" id="bid" required="">
                                     </div>
-                                    <input v-model="xx.bid" type="text" class="form-control form-control-lg allownumericwithoutdecimal" name="bid" id="bid" required="">
+                                    Enter $@{{ xx.item.bid_min  }} or more
                                 </div>
-                                Enter $@{{ xx.item.bid_min  }} or more
-                            </div>
-                            <div class="col-6">
-                                <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#confirmModal">Place bid</button>
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#confirmModal">Place bid</button>
+                                </div>
                             </div>
                         </div>
+
+                        {{-- Auction Paused --}}
+                        <div v-else>
+                            <h3>
+                                <span class="badge badge-pill badge-warning">Auction is currently paused</span>
+                            </h3>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -96,9 +111,11 @@
         <div class="row">
             <div class="col">
                 <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h3 class="my-0 font-weight-normal">Description</h3>
+                    </div>
                     <div class="card-body">
-                        <h3 class="my-0 font-weight-normal pb-3">Description</h3>
-                        {{ $item->description }}
+                        {!! $item->description !!}
                     </div>
                 </div>
 

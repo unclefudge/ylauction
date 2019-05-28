@@ -6,6 +6,7 @@ use DB;
 use Auth;
 use Validator;
 use App\User;
+use App\Models\AuctionConfig;
 use App\Models\AuctionItem;
 use App\Models\AuctionBid;
 use Carbon\Carbon;
@@ -21,15 +22,17 @@ class AuctionController extends Controller {
     {
         //dd('here');
         $items = AuctionItem::where('status', 1)->orderBy('name')->get();
+        $config = AuctionConfig::find(1);
 
-        return view('auction/index', compact('items'));
+        return view('auction/index', compact('items', 'config'));
     }
 
     public function show($id)
     {
         $item = AuctionItem::findOrFail($id);
+        $config = AuctionConfig::find(1);
 
-        return view('auction/show', compact('item'));
+        return view('auction/show', compact('item', 'config'));
     }
 
 
@@ -66,12 +69,14 @@ class AuctionController extends Controller {
                     //if ($item->nextBid($topBid->bid) > $newBid)  // New bid higher but less then increment
                     //    $item->price = $newBid
                     $item->price = ($item->nextBid($topBid->bid) > $newBid) ? $newBid : $item->nextBid($topBid->bid); //
+                    $item->max = $newBid;
                     $item->highest_bid = $bid_id;
                 } elseif ($topBid->uid != $uid)
                     $item->price = $newBid;     // New bid is less then or same as previous offer but also not by current Top Bidder
             } else {
                 // First ever bid on item
                 $item->price = 5;
+                $item->max = $newBid;
                 $item->highest_bid = $bid_id;
             }
 
@@ -88,10 +93,16 @@ class AuctionController extends Controller {
      */
     public function getItem($id)
     {
-        $items = ($id == 'all') ? AuctionItem::where('status', 1)->orderBy('name')->get() : AuctionItem::where('id', $id)->get();
+        $config = AuctionConfig::find(1);
+        $items = ($id == 'all') ? AuctionItem::where('status', 1)->orderBy('order')->orderBy('name')->get() : AuctionItem::where('id', $id)->get();
         $items_array = [];
         foreach ($items as $item) {
             $bids = $item->bids->count();
+            $bid_history = [];
+            foreach ($item->bids as $bid) {
+                $table = ($bid->user->table) ? ' (table ' . $bid->user->table . ')' : '';
+                $bid_history[] = $bid->created_at->format('h:ia') . ' - #' . $bid->user->bidder_id . ' ' . $bid->user->name . $table;
+            }
             $bids_bg = 'badge-info';
             if ($bids > 3) $bids_bg = 'badge-warning';
             if ($bids > 6) $bids_bg = 'badge-danger';
@@ -99,23 +110,27 @@ class AuctionController extends Controller {
                 'id'                => $item->id,
                 'name'              => $item->name,
                 'price'             => $item->price,
+                'max'               => $item->max,
                 'reserve'           => $item->reserve,
-                'bids'              => $bids,
-                'bid_min'           => $item->nextBid($item->price),
-                'bids_bg'           => $bids_bg,
                 'highest_bid'       => $item->highest_bid,
                 'highest_bid_id'    => ($item->topBidder()) ? $item->topBidder()->bidder_id : '',
                 'highest_bid_name'  => ($item->topBidder()) ? $item->topBidder()->name : '',
                 'winner'            => ($item->topBidder() && $item->topBidder()->id == Auth::user()->id) ? 1 : 0,
                 'winner_max'        => ($item->topBidder() && $item->topBidder()->id == Auth::user()->id) ? $item->topBid->bid : 0,
+                'bids'              => $bids,
+                'bid_min'           => $item->nextBid($item->price),
+                'bids_bg'           => $bids_bg,
+                'bid_history'       => $bid_history,
                 'order'             => $item->order,
-                'description'       => $item->description,
+                'brief'             => $item->brief,
                 'brief_description' => $item->brief_description,
+                'description'       => $item->description,
                 'image1'            => $item->img1,
                 'image2'            => $item->img2,
                 'image3'            => $item->img3,
                 'image4'            => $item->img4,
                 'status'            => $item->status,
+                'auction_status'    => $config->status,
             ];
             if ($id == 'all')
                 $items_array[] = $it;

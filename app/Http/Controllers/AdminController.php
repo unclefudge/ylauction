@@ -7,6 +7,7 @@ use Auth;
 use Validator;
 use App\User;
 use App\Models\AuctionItem;
+use App\Models\AuctionConfig;
 use Carbon\Carbon;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -23,9 +24,10 @@ class AdminController extends Controller {
             return abort(404);
 
         //dd('jj');
-        $items = AuctionItem::where('status', 1)->orderBy('name')->get();
+        $config = AuctionConfig::find(1);
+        $items = AuctionItem::where('status', 1)->orderBy('order')->orderBy('name')->get();
 
-        return view('admin/index', compact('items'));
+        return view('admin/index', compact('items', 'config'));
     }
 
     public function show($id)
@@ -43,11 +45,21 @@ class AdminController extends Controller {
         return view('admin/auction-max');
     }
 
+    public function auctionStatus($status)
+    {
+        $config = AuctionConfig::find(1);
+        $config->status = $status;
+        $config->save();
+
+        return redirect('/admin');
+    }
+
     /**
      * Get Items (ajax)
      */
     public function getItems()
     {
+        $config = AuctionConfig::find(1);
         $items = AuctionItem::where('status', 1)->orderBy('updated_at', 'desc')->get();
         $items_array = [];
         foreach ($items as $item) {
@@ -68,6 +80,7 @@ class AdminController extends Controller {
                 'image1'            => $item->img1,
                 'updated_at'        => $item->updated_at->format('G:i:s'),
                 'status'            => $item->status,
+                'auction_status'    => $config->status,
             ];
             $items_array[] = $it;
         }

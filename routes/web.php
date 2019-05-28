@@ -31,6 +31,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin', 'AdminController@index');
     Route::get('/admin/auction-live', 'AdminController@auctionLive');
     Route::get('/admin/auction-max', 'AdminController@auctionMax');
+    Route::get('/admin/auction-status/{status}', 'AdminController@auctionStatus');
 
     // Auction Items
     Route::get('/admin/item/{id}/del', 'AuctionItemController@destroy');

@@ -13,7 +13,21 @@ class CreateAuctionTables extends Migration
      */
     public function up()
     {
-        // Auction items
+        // Auction config
+        Schema::create('auction_config', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name', 255)->nullable();
+            $table->text('welcome')->nullable();
+            $table->text('rules')->nullable();
+            $table->dateTime('start')->nullable();
+            $table->dateTime('end')->nullable();
+            $table->tinyInteger('status')->default(1);
+
+            // Modify info
+            $table->timestamps();
+        });
+
+        // Auction categories
         Schema::create('auction_categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 255)->nullable();
@@ -29,6 +43,7 @@ class CreateAuctionTables extends Migration
             $table->increments('id');
             $table->unsignedInteger('cid')->nullable();
             $table->string('name', 255)->nullable();
+            $table->string('brief', 255)->nullable();
             $table->text('description')->nullable();
             $table->string('donated_by', 255)->nullable();
             $table->unsignedInteger('price')->default(0);
@@ -78,5 +93,6 @@ class CreateAuctionTables extends Migration
         Schema::dropIfExists('auction_bids');
         Schema::dropIfExists('auction_items');
         Schema::dropIfExists('auction_categories');
+        Schema::dropIfExists('auction_config');
     }
 }

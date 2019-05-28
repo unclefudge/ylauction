@@ -12,9 +12,8 @@ class AuctionItem extends Model {
 
     protected $table = 'auction_items';
     protected $fillable = [
-        'name', 'description', 'price', 'reserve', 'highest_bid',
-        'image1', 'image2', 'image3', 'image4',
-        'start', 'end', 'notes', 'status', 'cid'];
+        'name', 'donated_by', 'brief', 'description', 'price', 'max', 'reserve', 'highest_bid',
+        'image1', 'image2', 'image3', 'image4', 'start', 'end', 'notes', 'status', 'cid'];
 
     /**
      * A AuctionItem has many Bids
@@ -108,7 +107,7 @@ class AuctionItem extends Model {
      */
     public function getBriefDescriptionAttribute()
     {
-        return substr($this->description, 0, 70) . "....";
+        return substr($this->brief, 0, 70) . "....";
     }
 
 
