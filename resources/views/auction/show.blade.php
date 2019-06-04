@@ -230,18 +230,9 @@
             $("#img4").click(function () {
                 $("#big_image").attr('src', "{{ $item->img4}}");
             });
-
-            /*$(".allownumericwithoutdecimal").on("keypress keyup blur", function (event) {
-                $(this).val($(this).val().replace(/[^\d].+/, ""));
-                if ((event.which < 48 || event.which > 57)) {
-                    event.preventDefault();
-                }
-            });*/
-
         });
 
         function bidderName(sel) {
-            //alert(sel.options[sel.selectedIndex].text);
             xx.bidder_name = sel.options[sel.selectedIndex].text;
         }
 
