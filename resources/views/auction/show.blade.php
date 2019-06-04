@@ -103,7 +103,7 @@
                                         <div class="input-group-prepend">
                                             <label class="input-group-text" for="bid">$</label>
                                         </div>
-                                        <input v-model="xx.bid" type="text" class="form-control form-control-lg allownumericwithoutdecimal" name="bid" id="bid" required="">
+                                        <input v-model="xx.bid" v-on:keyup="numOnly" type="text" class="form-control form-control-lg" name="bid" id="bid" required="">
                                     </div>
                                     Enter $@{{ xx.item.bid_min  }} or more
                                 </div>
@@ -231,12 +231,12 @@
                 $("#big_image").attr('src', "{{ $item->img4}}");
             });
 
-            $(".allownumericwithoutdecimal").on("keypress keyup blur", function (event) {
+            /*$(".allownumericwithoutdecimal").on("keypress keyup blur", function (event) {
                 $(this).val($(this).val().replace(/[^\d].+/, ""));
                 if ((event.which < 48 || event.which > 57)) {
                     event.preventDefault();
                 }
-            });
+            });*/
 
         });
 
@@ -260,6 +260,9 @@
                 viewItem: function (item) {
                     window.location.href = "/auction/item/" + item.id;
                 },
+                numOnly: function () {
+                    this.xx.bid = this.xx.bid.replace(/[^\d]+/, "").substr(0, 9);
+                },
                 modalClass: function () {
                     if (this.xx.bid >= this.xx.item.bid_min)
                         return 'bg-info'
@@ -272,7 +275,7 @@
                 setInterval(function () {
                     this.loadData();
                     console.log('refreshed')
-                }.bind(this), 1000);
+                }.bind(this), 3000);
             }
         });
     </script>
