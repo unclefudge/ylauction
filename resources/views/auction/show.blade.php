@@ -266,7 +266,7 @@
                 setInterval(function () {
                     this.loadData();
                     console.log('refreshed')
-                }.bind(this), 3000);
+                }.bind(this), 1000);
             }
         });
     </script>
