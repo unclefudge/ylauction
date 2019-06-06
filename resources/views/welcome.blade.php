@@ -26,6 +26,20 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="table" class="col-md-4 col-form-label text-md-right">{{ __('Table') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="table" type="text" class="form-control @error('table') is-invalid @enderror" name="table" value="{{ old('table') }}" required autocomplete="table" autofocus>
+
+                                @error('table')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
@@ -66,6 +80,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+                                <a href="/login" class="pl-4">Already registered? - Login now</a>
                             </div>
                         </div>
                     </form>

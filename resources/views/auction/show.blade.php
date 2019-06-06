@@ -43,7 +43,7 @@
                         <h1 class="my-0 font-weight-normal">{{ $item->name }}</h1>
                         <h5 class="card-subtitle text-muted pt-1">Donated by {{ $item->donated_by }}</h5>
                     </div>
-                    <div class="card-body">
+                    <div v-if="xx.loaded" class="card-body">
                         <div class="row">
                             <div class="col-sm-6">
                                 <h2 class="card-title pricing-card-title">
@@ -52,7 +52,7 @@
                                 </h2>
                             </div>
                             <div class="col-sm-6">
-                                <h4 class="float-sm-right">
+                                <h4 v-if="xx.item.bids" class="float-sm-right">
                                     <span style="font-size:16px">@{{ xx.item.bids }} bids</span>
                                     <span v-if="xx.item.bids == 1" class="badge badge-pill badge-secondary">NO COMPETITION</span>
                                     <span v-if="xx.item.bids > 1 && xx.item.bids < 4" class="badge badge-pill" style="background: #FFFFD2; color:#000">SOME COMPETITION</span>
@@ -212,8 +212,7 @@
     <script src="/js/vue.min.js"></script>
     <script type="text/javascript">
         var xx = {
-            //bid: "{{ $item->nextBid($item->price) }}", item: '',
-            bid: '', bidder: '', bidder_name: '', admin: "{{ (Auth::user()->admin) ? 1 : 0 }}", item: '',
+            loaded: false, bid: '', bidder: '', bidder_name: '', admin: "{{ (Auth::user()->admin) ? 1 : 0 }}", item: '',
         };
 
         $(document).ready(function () {
@@ -245,7 +244,7 @@
                 loadData: function () {
                     $.getJSON('/data/auctions/item/' + {{ $item->id }}, function (data) {
                         this.xx.item = data;
-                        //this.xx.searching = false;
+                        this.xx.loaded = true;
                     }.bind(this));
                 },
                 viewItem: function (item) {

@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="bd7fb1a5-26c6-4ff4-9b29-695f40232435" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auction/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/auction/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
     </list>
     <ignored path="ylauction.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+              <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
               <folding>
                 <element signature="e#40#47#0#PHP" expanded="true" />
               </folding>
@@ -51,58 +55,68 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/auction/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3955095">
-              <caret line="105" column="74" selection-start-line="105" selection-start-column="74" selection-end-line="105" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.38818565">
+              <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
               <folding>
-                <marker date="1559696641492" expanded="true" signature="12265:12807" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="12278:12806" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="12287:12806" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="12331:12423" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="12344:12422" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="12455:12547" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="12468:12546" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="12579:12671" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="12592:12670" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="12703:12795" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="12716:12794" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="12845:12920" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="13000:13046" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="13111:13181" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="13201:13320" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="13397:13485" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="13669:13828" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="13879:14087" placeholder="..." />
-                <marker date="1559696641492" expanded="true" signature="13955:14054" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="12250:12792" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="12263:12791" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="12272:12791" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="12316:12408" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="12329:12407" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="12440:12532" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="12453:12531" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="12564:12656" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="12577:12655" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="12688:12780" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="12701:12779" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="12830:12905" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="12985:13031" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="13096:13166" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="13186:13299" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="13376:13464" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="13648:13807" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="13858:14066" placeholder="..." />
+                <marker date="1559798048334" expanded="true" signature="13934:14033" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/auction/index.blade.php">
+      <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="9" selection-start-line="23" selection-start-column="8" selection-end-line="30" selection-end-column="9" />
+              <caret line="39" column="34" selection-start-line="27" selection-start-column="28" selection-end-line="39" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuctionItem.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/AuctionItem.php">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/User.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="103" column="37" selection-start-line="103" selection-start-column="37" selection-end-line="103" selection-end-column="37" />
+              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auction-live.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/auction-live.blade.php">
+      <file leaf-file-name="RegisterController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+              <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -118,7 +132,6 @@
       <list>
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/public/js/test.js" />
         <option value="$PROJECT_DIR$/resources/views/auction/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/form-error.blade.php" />
@@ -127,16 +140,13 @@
         <option value="$PROJECT_DIR$/app/Http/Utilities/Slim.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/Models/AuctionBid.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_21_153634_create_auction_tables.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuctionItemController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/items/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/public/css/quill.snow.css" />
-        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/AuctionConfig.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/index.blade.php" />
@@ -150,6 +160,10 @@
         <option value="$PROJECT_DIR$/resources/views/admin/items/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/auction-max.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/auction-live.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auction/show.blade.php" />
       </list>
     </option>
@@ -482,6 +496,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ylauction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ylauction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Auth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -662,13 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49686193">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/_welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -760,14 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26778242">
-          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auction/show.select.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.54916316">
@@ -824,24 +849,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44456068">
-          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/quill.snow.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25188375">
           <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6809623">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -856,6 +868,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -870,16 +883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="134" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding>
-            <element signature="e#40#47#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -952,30 +955,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+          <folding>
+            <element signature="e#40#47#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="34" selection-start-line="27" selection-start-column="28" selection-end-line="39" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auction/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3955095">
-          <caret line="105" column="74" selection-start-line="105" selection-start-column="74" selection-end-line="105" selection-end-column="74" />
+        <state vertical-scroll-proportion="0.38818565">
+          <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
           <folding>
-            <marker date="1559696641492" expanded="true" signature="12265:12807" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="12278:12806" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="12287:12806" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="12331:12423" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="12344:12422" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="12455:12547" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="12468:12546" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="12579:12671" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="12592:12670" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="12703:12795" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="12716:12794" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="12845:12920" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="13000:13046" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="13111:13181" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="13201:13320" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="13397:13485" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="13669:13828" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="13879:14087" placeholder="..." />
-            <marker date="1559696641492" expanded="true" signature="13955:14054" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="12250:12792" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="12263:12791" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="12272:12791" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="12316:12408" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="12329:12407" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="12440:12532" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="12453:12531" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="12564:12656" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="12577:12655" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="12688:12780" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="12701:12779" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="12830:12905" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="12985:13031" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="13096:13166" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="13186:13299" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="13376:13464" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="13648:13807" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="13858:14066" placeholder="..." />
+            <marker date="1559798048334" expanded="true" signature="13934:14033" placeholder="..." />
           </folding>
         </state>
       </provider>
