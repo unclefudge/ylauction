@@ -45,6 +45,14 @@ class AdminController extends Controller {
         return view('admin/auction-max');
     }
 
+    public function auctionReport()
+    {
+        $config = AuctionConfig::find(1);
+        $items = AuctionItem::where('status', 1)->orderBy('order')->orderBy('name')->get();
+
+        return view('admin/report', compact('items', 'config'));
+    }
+
     public function auctionStatus($status)
     {
         $config = AuctionConfig::find(1);

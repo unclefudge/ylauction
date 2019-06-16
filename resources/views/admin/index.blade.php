@@ -8,6 +8,7 @@
             <a class="btn btn-secondary" href="/admin/auction-live" role="button">Auction Live</a>
             @if (Auth::user()->email == 'fudge')
                 <a class="btn btn-secondary" href="/admin/auction-max" role="button">Max</a>
+                <a class="btn btn-secondary" href="/admin/auction-report" role="button">Report</a>
             @endif
             @if ($config->status)
                 <a class="btn btn-danger float-right" href="/admin/auction-status/0" role="button"><i class="fa fa-pause pr-1"></i> Pause Auction</a>
