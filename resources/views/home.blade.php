@@ -4,8 +4,8 @@
     <div class="jumbotron jumbotron-fluid" style="color: #FFD700; background: #000">
         <div class="container text-center">
             <h1>
-                <small>Welcome to Young Life's</small>
-                <br>Great Gatsby Auction.
+                <small>Welcome to Young Life Barossa</small>
+                <br>Trivia Night.
             </h1>
         </div>
     </div>
