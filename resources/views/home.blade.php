@@ -5,7 +5,7 @@
         <div class="container text-center">
             <h1>
                 <small>Welcome to Barossa Young Life </small>
-                <br>Trivia Night.
+                <br>Trivia Night 2019.
             </h1>
         </div>
     </div>
