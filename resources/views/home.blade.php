@@ -4,7 +4,7 @@
     <div class="jumbotron jumbotron-fluid" style="color: #FFD700; background: #000">
         <div class="container text-center">
             <h1>
-                <small>Welcome to Barossa Young Life </small>
+                <small>Welcome to Monash Young Life </small>
                 <br>Trivia Night 2019.
             </h1>
         </div>
